@@ -1,3 +1,3 @@
 services:
   wordle:
-    image: ghcr.io/baksha97/discord-wordle-bot:main
+    image: ghcr.io/baksha97/discord-wordle-bot:1.0
