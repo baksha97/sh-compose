@@ -1,4 +1,5 @@
-# sh-image-deployments
+# Self Hosted Deployment Repository 
 
-Don't forget to add this repository to the package settings for each repository:
-https://docs.github.com/en/packages/learn-github-packages/configuring-a-packages-access-control-and-visibility
+This janky repo allows you to use `docker compose` to deploy as many apps as you want on one singular box... you can even deploy multiple GitHub runners!
+
+You can use this on any old linux box or even a digital ocean droplet.
