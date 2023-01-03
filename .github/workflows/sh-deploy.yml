@@ -25,10 +25,10 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.PACKAGE_READ_PAT }}
-      - name: Kill all other containers
-        continue-on-error: true
-        run: |
-          docker kill $(docker ps -q)
+#       - name: Kill all other containers
+#         continue-on-error: true
+#         run: |
+#           docker kill $(docker ps -q)
       - name: Run
         run: |-
           docker compose build --pull --no-cache
