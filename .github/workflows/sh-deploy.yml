@@ -10,7 +10,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: [self-hosted, tp-ud1]
+    runs-on: [self-hosted, tp-ud2]
     permissions:
       packages: read
     steps:
