@@ -10,7 +10,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: [self-hosted, tp-ud1]
+    runs-on: [self-hosted, tp-ud2]
     permissions:
       packages: read
     steps:
@@ -25,11 +25,7 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.PACKAGE_READ_PAT }}
-#       - name: Kill all other containers
-#         continue-on-error: true
-#         run: |
-#           docker kill $(docker ps -q)
-      - name: Run
+      - name: Run Compose Up
         run: |-
           docker compose build --pull --no-cache
           docker compose up --detach --remove-orphans --wait
