@@ -2,7 +2,7 @@ services:
   wordle:
     image: ghcr.io/baksha97/discord-wordle-bot:1.0.1
   openai:
-    image: ghcr.io/baksha97/discord-openai-bot:1.0.0
+    image: ghcr.io/baksha97/discord-openai-bot:1.0.1
   wordle-gh-runner:
     image: myoung34/github-runner:latest
     environment:
