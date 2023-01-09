@@ -3,6 +3,12 @@ services:
     image: ghcr.io/baksha97/discord-wordle-bot:1.0.1
   openai:
     image: ghcr.io/baksha97/discord-openai-bot:1.0.1
+  appwrite:
+    image: appwrite/appwrite:1.2.0
+    entrypoint: install
+    volumes:
+      - '/var/run/docker.sock:/var/run/docker.sock'
+      - '/appwrite:/usr/src/code/appwrite:rw'
   wordle-gh-runner:
     image: myoung34/github-runner:latest
     environment:
