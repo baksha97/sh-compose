@@ -3,15 +3,14 @@ services:
     image: ghcr.io/baksha97/discord-wordle-bot:1.0.1
   openai:
     image: ghcr.io/baksha97/discord-openai-bot:1.0.1
-#   appwrite:
-#     image: appwrite/appwrite:1.2.0
-#     entrypoint: install
-#     volumes:
-#       - '/var/run/docker.sock:/var/run/docker.sock'
-#       - '/appwrite:/usr/src/code/appwrite:rw'
-#     ports:
-#       - 7000:80
-#       - 7443:443
+  redis:
+    image: redis:6.2-alpine
+    restart: always
+    ports:
+      - '6379:6379'
+    command: redis-server --save 20 1 --loglevel warning --requirepass eYVX7EwVmmxKPCDmwMtyKVge8oLd2t81
+    volumes: 
+      - cache:/data
   wordle-gh-runner:
     image: myoung34/github-runner:latest
     environment:
