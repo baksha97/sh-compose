@@ -1,6 +1,7 @@
-services:
-  volumes:
+volumes:
     cache:
+   
+services:
   wordle:
     image: ghcr.io/baksha97/discord-wordle-bot:1.0.1
   openai:
