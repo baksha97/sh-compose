@@ -1,6 +1,6 @@
 services:
   volumes:
-    redis:
+    cache:
   wordle:
     image: ghcr.io/baksha97/discord-wordle-bot:1.0.1
   openai:
@@ -12,7 +12,7 @@ services:
       - '6379:6379'
     command: redis-server --save 20 1 --loglevel warning --requirepass eYVX7EwVmmxKPCDmwMtyKVge8oLd2t81
     volumes: 
-      - redis:/data
+      - cache:/data
   wordle-gh-runner:
     image: myoung34/github-runner:latest
     environment:
