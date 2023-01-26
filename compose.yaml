@@ -4,7 +4,7 @@ services:
   openai:
     image: ghcr.io/baksha97/discord-openai-bot:1.0.1
   redis:
-    image: redis:6.2-alpine
+    image: redis:latest
     restart: always
     ports:
       - '6379:6379'
