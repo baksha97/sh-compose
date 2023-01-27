@@ -4,6 +4,8 @@ volumes:
 services:
   leetcode:
     image: ghcr.io/baksha97/discord-leetcode-bot:0.0.13
+    depends_on:
+        - redis
   wordle:
     image: ghcr.io/baksha97/discord-wordle-bot:1.0.1
   openai:
@@ -13,7 +15,7 @@ services:
     restart: always
     ports:
       - '6379:6379'
-    command: redis-server --save 20 1 --loglevel debug
+    command: redis-server --save 20 1 --loglevel warning
     volumes: 
       - cache:/data
   wordle-gh-runner:
