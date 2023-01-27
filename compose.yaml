@@ -61,6 +61,7 @@ services:
       RUNNER_WORKDIR: /tmp/runner/work
       RUNNER_SCOPE: 'repo'
       LABELS: linux,x64,gpu,Linux
+      DISABLE_AUTO_UPDATE: true
     security_opt:
       - label:disable
     volumes:
