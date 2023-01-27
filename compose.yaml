@@ -2,6 +2,8 @@ volumes:
     cache:
    
 services:
+  leetcode:
+    image: ghcr.io/baksha97/discord-leetcode-bot:0.0.1
   wordle:
     image: ghcr.io/baksha97/discord-wordle-bot:1.0.1
   openai:
