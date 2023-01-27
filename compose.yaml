@@ -46,17 +46,17 @@ services:
     volumes:
       - '/var/run/docker.sock:/var/run/docker.sock'
       - '/tmp/runner:/tmp/runner'
-  leetcode-gh-runner:
-    image: myoung34/github-runner:latest
-    environment:
-      RUNNER_NAME: discord-leetcode-bot-runner
-      REPO_URL: https://github.com/baksha97/discord-leetcode-bot
-      ACCESS_TOKEN: ${PAT}
-      RUNNER_WORKDIR: /tmp/runner/work
-      RUNNER_SCOPE: 'repo'
-      LABELS: linux,x64,gpu,Linux
-    security_opt:
-      - label:disable
-    volumes:
-      - '/var/run/docker.sock:/var/run/docker.sock'
-      - '/tmp/runner:/tmp/runner'
+#   leetcode-gh-runner:
+#     image: myoung34/github-runner:latest
+#     environment:
+#       RUNNER_NAME: discord-leetcode-bot-runner
+#       REPO_URL: https://github.com/baksha97/discord-leetcode-bot
+#       ACCESS_TOKEN: ${PAT}
+#       RUNNER_WORKDIR: /tmp/runner/work
+#       RUNNER_SCOPE: 'repo'
+#       LABELS: linux,x64,gpu,Linux
+#     security_opt:
+#       - label:disable
+#     volumes:
+#       - '/var/run/docker.sock:/var/run/docker.sock'
+#       - '/tmp/runner:/tmp/runner'
