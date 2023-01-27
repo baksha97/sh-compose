@@ -3,7 +3,7 @@ volumes:
    
 services:
   leetcode:
-    image: ghcr.io/baksha97/discord-leetcode-bot:1a15926
+    image: ghcr.io/baksha97/discord-leetcode-bot:0.0.16
     depends_on:
         - redis
     environment:
