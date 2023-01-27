@@ -2,12 +2,12 @@ volumes:
     cache:
    
 services:
-  leetcode:
-    image: ghcr.io/baksha97/discord-leetcode-bot:0.0.13
-    depends_on:
-        - redis
-    environment:
-        REDIS: "redis:6379"
+#   leetcode:
+#     image: ghcr.io/baksha97/discord-leetcode-bot:0.0.13
+#     depends_on:
+#         - redis
+#     environment:
+#         REDIS: "redis:6379"
   wordle:
     image: ghcr.io/baksha97/discord-wordle-bot:1.0.1
   openai:
