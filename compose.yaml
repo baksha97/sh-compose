@@ -3,7 +3,7 @@ volumes:
    
 services:
   leetcode:
-    image: ghcr.io/baksha97/discord-leetcode-bot:main
+    image: ghcr.io/baksha97/discord-leetcode-bot:0.0.11
   wordle:
     image: ghcr.io/baksha97/discord-wordle-bot:1.0.1
   openai:
