@@ -98,12 +98,10 @@ services:
       - '/var/run/docker.sock:/var/run/docker.sock'
       - '/tmp/runner:/tmp/runner'
   bc-firestore:
-    image: caspr.firestore
-    build:
-      context: .
-      dockerfile: Dockerfile.caspr.firestore
+    image: firebase-emulator
     ports:
       - 4000:4000
       - 8080:8080
-    volumes:
-      - .cache/firebase/emulators/:/app/.cache/firebase/emulators/ 
+      - 9099:9099
+    environment:
+      FIREBASE_PROJECT: better-caspr
