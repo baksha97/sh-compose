@@ -9,6 +9,8 @@ services:
   appwrite:
     image: appwrite/appwrite:latest
     restart: unless-stopped
+    ports: 
+      - 9501:80
 #     networks:
 #         - appwrite
 #     labels:
