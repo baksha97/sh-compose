@@ -8,9 +8,17 @@ volumes:
 services:
   appwrite:
     image: appwrite/appwrite:latest
-    restart: unless-stopped
-    ports: 
-      - 9501:80
+    networks:
+        - appwrite
+    labels:
+        - traefik.http.routers.appwrite.rule=PathPrefix(`/`)
+        - traefik.http.routers.appwrite-secure.rule=PathPrefix(`/`)
+        - traefik.http.routers.appwrite-secure.tls=true
+    volumes:
+        - appwrite-uploads:/storage/uploads:rw
+        - appwrite-cache:/storage/cache:rw
+        - appwrite-config:/storage/config:rw
+        - appwrite-certificates:/storage/certificates:rw
 #     networks:
 #         - appwrite
 #     labels:
