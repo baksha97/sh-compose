@@ -1,35 +1,7 @@
 volumes:
     cache:
-    appwrite-uploads:
-    appwrite-cache:
-    appwrite-config:
-    appwrite-certificates:
-   
+    
 services:
-  appwrite:
-    image: appwrite/appwrite:latest
-    ports:
-      - '80:8200'
-    labels:
-        - traefik.http.routers.appwrite.rule=PathPrefix(`/`)
-        - traefik.http.routers.appwrite-secure.rule=PathPrefix(`/`)
-        - traefik.http.routers.appwrite-secure.tls=true
-    volumes:
-        - appwrite-uploads:/storage/uploads:rw
-        - appwrite-cache:/storage/cache:rw
-        - appwrite-config:/storage/config:rw
-        - appwrite-certificates:/storage/certificates:rw
-#     networks:
-#         - appwrite
-#     labels:
-#     - traefik.http.routers.appwrite.rule=PathPrefix(`/`)
-#     - traefik.http.routers.appwrite-secure.rule=PathPrefix(`/`)
-#     - traefik.http.routers.appwrite-secure.tls=true
-#     volumes:
-#     - appwrite-uploads:/storage/uploads:rw
-#     - appwrite-cache:/storage/cache:rw
-#     - appwrite-config:/storage/config:rw
-#     - appwrite-certificates:/storage/certificates:rw
   leetcode:
     image: ghcr.io/baksha97/discord-leetcode-bot:0.0.16
     depends_on:
