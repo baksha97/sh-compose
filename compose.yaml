@@ -6,11 +6,11 @@ volumes:
     appwrite-certificates:
    
 services:
-appwrite:
+  appwrite:
     image: appwrite/appwrite:latest
     restart: unless-stopped
     networks:
-    - appwrite
+        - appwrite
 #     labels:
 #     - traefik.http.routers.appwrite.rule=PathPrefix(`/`)
 #     - traefik.http.routers.appwrite-secure.rule=PathPrefix(`/`)
