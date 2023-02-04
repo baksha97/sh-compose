@@ -8,8 +8,8 @@ volumes:
 services:
   appwrite:
     image: appwrite/appwrite:latest
-#     networks:
-#         - appwrite
+    ports:
+      - '80:8200'
     labels:
         - traefik.http.routers.appwrite.rule=PathPrefix(`/`)
         - traefik.http.routers.appwrite-secure.rule=PathPrefix(`/`)
