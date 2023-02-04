@@ -2,6 +2,13 @@ volumes:
     cache:
    
 services:
+  firestore_emulator:
+    image: mtlynch/firestore-emulator
+    environment:
+      - FIRESTORE_PROJECT_ID=better-caspr
+      - PORT=8200
+    ports:
+      - 8200:8200
   leetcode:
     image: ghcr.io/baksha97/discord-leetcode-bot:0.0.16
     depends_on:
