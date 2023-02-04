@@ -12,8 +12,8 @@ services:
     image: ghcr.io/baksha97/discord-wordle-bot:1.0.1
   openai:
     image: ghcr.io/baksha97/discord-openai-bot:1.0.1
-#   ubiquity:
-#     image: ghcr.io/baksha97/ubiquiti-stock-checker:1.0.1
+  ubiquity:
+    image: ghcr.io/baksha97/ubiquiti-stock-checker:1.0.1
   redis:
     image: redis:latest
     restart: always
