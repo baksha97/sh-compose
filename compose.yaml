@@ -8,8 +8,8 @@ volumes:
 services:
   appwrite:
     image: appwrite/appwrite:latest
-    networks:
-        - appwrite
+#     networks:
+#         - appwrite
     labels:
         - traefik.http.routers.appwrite.rule=PathPrefix(`/`)
         - traefik.http.routers.appwrite-secure.rule=PathPrefix(`/`)
