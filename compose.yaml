@@ -13,7 +13,7 @@ services:
   openai:
     image: ghcr.io/baksha97/discord-openai-bot:1.0.1
   ubiquiti:
-    image: ghcr.io/baksha97/ubiquiti-stock-checker:1.0.3
+    image: ghcr.io/baksha97/ubiquiti-stock-checker:1.0.4
   redis:
     image: redis:latest
     restart: always
