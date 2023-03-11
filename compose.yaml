@@ -10,10 +10,10 @@ services:
         REDIS: "redis:6379"
   wordle:
     image: ghcr.io/baksha97/discord-wordle-bot:1.0.1
-  openai:
-    image: ghcr.io/baksha97/discord-openai-bot:1.0.1
-#   ubiquiti:
-#     image: ghcr.io/baksha97/ubiquiti-stock-checker:1.0.4
+#   openai:
+#     image: ghcr.io/baksha97/discord-openai-bot:1.0.1
+  ubiquiti:
+    image: ghcr.io/baksha97/ubiquiti-stock-checker:1.0.4
   redis:
     image: redis:latest
     restart: always
